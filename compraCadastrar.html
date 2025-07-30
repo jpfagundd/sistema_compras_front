@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Compra</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="/js/compraCadastrar.js" defer></script>
 </head>
+
 <body>
-    <a href="index.html">Home</a>
-    <br><br><br>
-    <label for="idUsuario">ID do Usuário: <input type="number" id="idUsuario" placeholder="Ex: 4"></label>
-    <br><label for="idProduto">ID do Produto: <input type="number" id="idProduto" placeholder="Ex: 7"></label>
-    <br><label for="quantidade">Quantidade: <input type="number" id="quantidade" placeholder="Ex: 500"></label>
-    <br><label for="dataCompra">Data da Compra: <input type="date" id="dataCompra" placeholder="Ex: 18/07/2025"></label>
-    <br><label for="precoUnitario">Preço unitário: <input type="number" id="precoUnitario" placeholder="Ex: 8.90"></label>
-    <br><label for="descontoAplicado">Desconto Aplicado: <input type="number" id="descontoAplicado" placeholder="Ex: 19.87"></label>
-    <br><label for="formaPagamento">Forma de Pagamento: <input type="text" id="formaPagamento" placeholder="Ex: PIX"></label>
-    <br><label for="statusCompra">Status da Compra: <select id="statusCompra">
-        <option value="em_andamento">Em andamento</option>
-        <option value="finalizado">Finalizado</option>
-    </select></label>
-    <br><button>Cadastrar</button>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <br><br><br>
+        <label for="idUsuario">ID do Usuário: <input type="number" id="idUsuario" placeholder="Ex: 4"></label>
+        <br><label for="idProduto">ID do Produto: <input type="number" id="idProduto" placeholder="Ex: 7"></label>
+        <br><label for="quantidade">Quantidade: <input type="number" id="quantidade" placeholder="Ex: 500"></label>
+        <br><label for="dataCompra">Data da Compra: <input type="date" id="dataCompra"
+                placeholder="Ex: 18/07/2025"></label>
+        <br><label for="precoUnitario">Preço unitário: <input type="number" id="precoUnitario"
+                placeholder="Ex: 8.90"></label>
+        <br><label for="descontoAplicado">Desconto Aplicado: <input type="number" id="descontoAplicado"
+                placeholder="Ex: 19.87"></label>
+        <br><label for="formaPagamento">Forma de Pagamento: <input type="text" id="formaPagamento"
+                placeholder="Ex: PIX"></label>
+        <br><label for="statusCompra">Status da Compra: <select id="statusCompra">
+                <option value="em_andamento">Em andamento</option>
+                <option value="finalizado">Finalizado</option>
+            </select></label>
+        <br><button>Cadastrar</button>
+    </div>
 </body>
+
 </html>

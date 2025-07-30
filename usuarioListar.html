@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Usuários</title>
     <script src="/js/usuarioListar.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <br><br><br>
+        <section>
+            <h2>Lista de Usuários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Sobrenome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Endereço</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Data de Nascimento</th>
+                    </tr>
+                </thead>
+                <tbody id="usuarios-tabela">
+                    <!--Dados vem do JS-->
+                </tbody>
+            </table>
+        </section>
+        <br>
+        <button id="listarTudo">Listar Usuários</button>
+        <div id="res"></div>
+        <br><br>
+        <label for="id">ID do Usuário: <input type="number" id="id"></label>
+        <br><button id="listarId">Listar o Úsuario do ID</button>
+    </div>
     <a href="index.html">Home</a>
     <br><br><br>
     <section>
@@ -38,4 +73,5 @@
     <label for="id">ID do Usuário: <input type="number" id="id"></label>
     <br><button id="listarId">Listar o Úsuario do ID</button>
 </body>
+
 </html>
