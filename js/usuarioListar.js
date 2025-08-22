@@ -1,10 +1,12 @@
 let res = document.getElementById('res')
+let resListarId = document.getElementById('resListarId')
 
-let btn = document.getElementById('btn')
+let listarTudo = document.getElementById('listarTudo')
+let listarId = document.getElementById('listarId')
 
 const tabelaUsuarios = document.getElementById('usuarios-tabela')
 
-btn.addEventListener('click', ()=>{
+listarTudo.addEventListener('click', ()=>{
     res.innerHTML = ''
     fetch(`http://localhost:3000/usuario`)
     .then(resp => resp.json())
@@ -34,13 +36,17 @@ btn.addEventListener('click', ()=>{
 })
 
 listarId.addEventListener('click', ()=>{
-    id = document.getElementById('id')
-    fetch(`http://localhost:3000/usuario/listar/:id`)
+    id = document.getElementById('id').value
+    fetch(`http://localhost:3000/usuario/listar/${id}`)
     .then(resp => resp.json())
-    .then(dados =>{
-        dados.forEach(dad => {
-            res.innerHTML += `{<br>${dad}<br>}<br>`
-        })
+    .then(dad =>{
+        resListarId.innerHTML += `
+                {<br>
+                ID: ${dad.id}<br>
+                Nome: ${dad.primeiroNome}<br>
+                Email: ${dad.email}<br>
+                }<br>
+            `;
     })
     .catch((err)=>{
         console.error('Erro ao listar o usuário!',err)

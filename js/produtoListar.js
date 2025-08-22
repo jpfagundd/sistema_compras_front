@@ -32,16 +32,31 @@ btn.addEventListener('click', ()=>{
     })
 })
 
-listarId.addEventListener('click', ()=>{
-    id = document.getElementById('id')
-    fetch(`http://localhost:3000/produto/listar/:id`)
-    .then(resp => resp.json())
-    .then(dados =>{
-        dados.forEach(dad => {
-            res.innerHTML += `{<br>${dad}<br>}<br>`
+let resListarId = document.getElementById('resListarId')
+
+listarId.addEventListener('click', () => {
+    const id = document.getElementById('id').value
+    resListarId.innerHTML = '' // limpa resultado anterior
+
+    fetch(`http://localhost:3000/produto/listar/${id}`)
+        .then(resp => {
+            if(!resp.ok){
+                throw new Error('Produto não encontrado')
+            }
+            return resp.json()
         })
-    })
-    .catch((err)=>{
-        console.error('Erro ao listar o produto!',err)
-    })
+        .then(produto => {
+            resListarId.innerHTML = `
+                {<br>
+                ID: ${produto.id}<br>
+                Título: ${produto.titulo}<br>
+                Preço: ${produto.preco}<br>
+                Estoque: ${produto.estoque}<br>
+                }<br>
+            `
+        })
+        .catch(err => {
+            console.error('Erro ao listar o produto!', err)
+            resListarId.innerHTML = `Produto não encontrado ou erro ao buscar`
+        })
 })
