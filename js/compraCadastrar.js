@@ -1,5 +1,5 @@
+const btn = document.getElementById('btn')
 document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('btn')
     btn.addEventListener('click', () => {
         const idUsuario = Number(document.getElementById('idUsuario').value)
         const idProduto = Number(document.getElementById('idProduto').value)
