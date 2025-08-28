@@ -1,10 +1,10 @@
 let res = document.getElementById('res')
-let btn = document.getElementById('apagFab')
+let btn = document.getElementById('btn')
 
 btn.addEventListener('click', (e)=>{
     e.preventDefault()
     const idCompra = Number(document.getElementById('idCompra').value)
-    console.log(id)
+    console.log(idCompra)
 
     res.innerHTML = ''
 

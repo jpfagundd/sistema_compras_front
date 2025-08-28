@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             quantidade,
             dataCompra,
             precoUnitario,
+            descontoAplicado,
             precoFinal,
             formaPagamento,
             statusCompra

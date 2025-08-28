@@ -2,10 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('btn')
     btn.addEventListener('click', () => {
         const idCompra = Number(document.getElementById('idCompra'))
-        const idUsuario = Number(document.getElementById('idUsuario').value)
-        const idProduto = Number(document.getElementById('idProduto').value)
-        const quantidade = Number(document.getElementById('quantidade').value)
-        const dataCompra = document.getElementById('dataCompra').value
         const precoUnitario = Number(document.getElementById('precoUnitario').value)
         const descontoAplicado = Number(document.getElementById('descontoAplicado').value)
         const precoFinal = precoUnitario - (precoUnitario * (descontoAplicado/100))
@@ -13,11 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const statusCompra = document.getElementById('statusCompra').value
 
         const valores = {
-            idUsuario,
-            idProduto,
-            quantidade,
-            dataCompra,
             precoUnitario,
+            descontoAplicado,
             precoFinal,
             formaPagamento,
             statusCompra
